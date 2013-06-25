@@ -108,7 +108,7 @@ class Magneto_Varnish_Helper_Data extends Mage_Core_Helper_Abstract
 	 * @return mixed
 	 */
 	protected function logAdminAction($success=true, $generalInfo=null, $additionalInfo=null, $errors=array()) {
-                if(Mage::getConfig ()->getModuleConfig ( 'Enterprise_Enterprise' )){
+		if(!Mage::getConfig()->getModuleConfig('Enterprise_Enterprise')){
 			return;
 		}
 
